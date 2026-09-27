@@ -1,0 +1,10 @@
+{
+	"DxWindow": {
+		"screenWidth": 1280,
+		"screenHeight": 720,
+		"title": "KDW-2D"
+	},
+	"World": {
+		"sampleCount": 1,
+	},
+}
