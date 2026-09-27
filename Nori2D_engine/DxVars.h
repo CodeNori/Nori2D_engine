@@ -59,5 +59,11 @@ extern Dx11Vars g_Dx11;
 
 
 
+#ifdef _DEBUG
+#pragma comment(lib, "Lib/Nori2D_D.lib")
+
+#else
+#pragma comment(lib, "Lib/Nori2D.lib")
+#endif
 
 
