@@ -2,6 +2,7 @@
 
 static const char* tree_FILE_NAME = "Content\\tiles.png";
 static const char* farmer_FILE_NAME = "Content\\farmer11.png";
+static const char* explosion_FILE_NAME = "Content\\Explosion.png";
 
 
 static
@@ -65,8 +66,28 @@ PngImage::Frame g_char_frames_right[] =
     { 7 * 32,64,  32,32 },
 };
 
+
+static
+PngImage::Frame g_explosion_frames[] =
+{
+    {    0,0,   64,64 },  
+    { 1 * 64,0,   64,64 },
+    { 2 * 64,0,   64,64 },
+    { 3 * 64,0,   64,64 },
+    { 4 * 64,0,   64,64 },
+    { 5 * 64,0,   64,64 },
+    { 6 * 64,0,   64,64 },
+    { 7 * 64,0,   64,64 },
+    { 8 * 64,0,   64,64 },
+    { 9 * 64,0,   64,64 }
+};
+
+
 static
 FrameAnimationInfo tree_animInfo = { 0.1f, 0, 0, 0, 80,166 };
 
 static
 FrameAnimationInfo char_animInfo = { 0.1f, 0, 6, 0, 24,34 };
+
+static
+FrameAnimationInfo explosion_animInfo = { 0.1f, 0, 10, 0,      32,32 };

@@ -13,6 +13,7 @@ public:
 
 	XSprite sp;
 	XSprite sp_char;
+	XSprite sp_explosion;
 	int mRenderedSpriteCount = 0;
 };
 
