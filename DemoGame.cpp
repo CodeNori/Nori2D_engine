@@ -75,7 +75,7 @@ void DemoGame::Draw(float delta)
         boxIdx[6] = 3;
         boxIdx[7] = 0;
 
-        lvc.Add(box, 4, boxIdx, 8, 0xFF0000FF);
+        lvc.Add(box, 4, boxIdx, 8, RGB1(255, 0, 0));
 
         lvc.Draw();
     }
