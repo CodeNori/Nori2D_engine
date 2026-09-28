@@ -5,6 +5,7 @@
 #include "DxImGui.h"
 #include "GameData.h"
 
+#define RGB1(r,g,b)   (0xFF000000 | RGB(r,g,b))
 
 
 DemoGame::DemoGame()
@@ -37,15 +38,48 @@ void DemoGame::Update(float delta)
 
 void DemoGame::Draw(float delta)
 {
-    VertexCollector vc;
+    {
+        VertexCollector vc;
 
-    sp_char.UpdateAnimation(delta);
-    sp_explosion.UpdateAnimation(delta);
+        sp_char.UpdateAnimation(delta);
+        sp_explosion.UpdateAnimation(delta);
 
-    vc.Add(sp);
-    vc.Add(sp_char);
-    vc.Add(sp_explosion);
-    vc.Draw(g_Dx11.renderer);
+        vc.Add(sp);
+        vc.Add(sp_char);
+        vc.Add(sp_explosion);
+        vc.Draw();
+    }
+     
+    {
+        LineVertexCollector lvc;
+
+        XFloat2 line[2];
+        line[0] = { 500.f, 10.f };
+        line[1] = { 500.f, 200.f };
+
+        lvc.Add(line, 2, RGB1(0, 255, 0) );
+
+        XFloat2 box[4];
+        box[0] = { 100.f, 20.f };
+        box[1] = { 300.f, 20.f };
+        box[2] = { 300.f, 100.f };
+        box[3] = { 100.f, 100.f };
+
+        USHORT boxIdx[8];
+        boxIdx[0] = 0;
+        boxIdx[1] = 1;
+        boxIdx[2] = 1;
+        boxIdx[3] = 2;
+        boxIdx[4] = 2;
+        boxIdx[5] = 3;
+        boxIdx[6] = 3;
+        boxIdx[7] = 0;
+
+        lvc.Add(box, 4, boxIdx, 8, 0xFF0000FF);
+
+        lvc.Draw();
+    }
+
 }
 
 void DemoGame::DrawGUI(float delta)

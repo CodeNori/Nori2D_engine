@@ -30,8 +30,20 @@ struct VertexCollector
     int GetPrimitiveCount();
 
     void Sort();
-    void Draw(class D2Renderer* mRenderer);
+    void Draw();
 
 };
 
 
+struct LineVertexCollector
+{
+    D2_VERTEX vt0[1000];
+    D2_INDEX  idx0[2000];
+    USHORT vtCount = 0;
+    USHORT primCount = 0;
+
+    void Add(XFloat2* pt, int count, unsigned int color);
+    void Add(XFloat2* pt, int vt_count, USHORT* idx, int idx_count, unsigned int color);
+    void Draw();
+
+};

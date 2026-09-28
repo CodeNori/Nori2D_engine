@@ -11,6 +11,9 @@
     <Filter Include="Main">
       <UniqueIdentifier>{bf10cc38-0975-44e0-a94b-bcc9defe16d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{e0fa722d-4ba8-42d3-a5d5-99bfd297169b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DemoGame.h">
