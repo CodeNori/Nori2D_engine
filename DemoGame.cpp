@@ -51,7 +51,7 @@ void DemoGame::Draw(float delta)
     }
      
     {
-        LineVertexCollector lvc;
+        LineCollector lvc;
 
         XFloat2 line[2];
         line[0] = { 500.f, 10.f };
