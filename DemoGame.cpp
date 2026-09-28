@@ -33,6 +33,10 @@ DemoGame::DemoGame()
 
 void DemoGame::Update(float delta)
 {
+    rot += delta;
+    if (rot > MATH_PIX2) rot -= MATH_PIX2;
+
+    sp.rotation = rot;
 
 }
 

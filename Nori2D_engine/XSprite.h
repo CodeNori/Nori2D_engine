@@ -10,11 +10,13 @@ struct D2_VERTEX
     unsigned int   col;
 };
 
+
 struct XSprite
 {
     XFloat2 pos;
     float   z;
     XFloat2 size;
+    float   rotation;
 
     PngImage png;
     FrameAnimationInfo anim;

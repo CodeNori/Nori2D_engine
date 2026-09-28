@@ -15,5 +15,7 @@ public:
 	XSprite sp_char;
 	XSprite sp_explosion;
 	int mRenderedSpriteCount = 0;
+
+	float rot = 0.f;
 };
 

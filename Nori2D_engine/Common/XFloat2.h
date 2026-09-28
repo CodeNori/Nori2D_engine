@@ -1,6 +1,8 @@
 #pragma once
 #include <math.h>
 
+#define MATH_PIX2                   6.28318530717958647693f
+#define MATH_PI                     3.14159265358979323846f
 /**Util macro for conversion from degrees to radians.*/
 #define MATH_DEG_TO_RAD(x) ((x) * 0.0174532925f)
 /**Util macro for conversion from radians to degrees.*/

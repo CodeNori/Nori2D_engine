@@ -29,8 +29,14 @@ struct VertexCollector
     void AddTile(D2_VERTEX* vt, D2_INDEX* idx, PngImage png, XFloat2 pos);
     int GetPrimitiveCount();
 
-    void Sort();
     void Draw();
+    void Sort()
+    {
+        std::sort(sprites.begin(), sprites.end(), [](const INDX_t& a, const INDX_t& b)
+            {
+                return (a.z == b.z) ? (a.x < b.x) : (a.z < b.z);
+            });
+    }
 
 };
 
