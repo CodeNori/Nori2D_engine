@@ -23,10 +23,14 @@ typedef DirectX::XMFLOAT4 XFloat4;
 typedef DirectX::XMFLOAT3 XFloat3;
 typedef entt::entity ActorID;
 
+#include "DxVars.h"
+
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "dxguid.lib")
 #pragma comment(lib, "d3dcompiler.lib")
 #pragma comment(lib, "Lib/lua55.lib")
+
+
 
 extern entt::registry ecs1;
 

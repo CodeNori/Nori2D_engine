@@ -5,7 +5,11 @@
 #include "DxVars.h"
 #include "DemoGame.h"
 
-
+#ifdef _DEBUG 
+    #pragma comment(lib, "Lib/Nori2D_D.lib")
+#else
+    #pragma comment(lib, "Lib/Nori2D.lib")
+#endif
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 

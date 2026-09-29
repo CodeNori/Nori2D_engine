@@ -85,9 +85,13 @@ PngImage::Frame g_explosion_frames[] =
 
 static
 FrameAnimationInfo tree_animInfo = { 0.1f, 0, 0, 0, 80,166 };
+FrameAnimationInfo tree_animInfo1 = { 0.1f, 1, 0, 0, 32, 140 };
+FrameAnimationInfo tree_animInfo2 = { 0.1f, 2, 0,0, 30, 139 };
+FrameAnimationInfo tree_animInfo3 = { 0.1f, 3, 0,0, 30, 94 };
+
 
 static
-FrameAnimationInfo char_animInfo = { 0.1f, 0, 6, 0, 24,34 };
+FrameAnimationInfo char_animInfo = { 0.1f, 0, 6, 0, 32,46 };
 
 static
 FrameAnimationInfo explosion_animInfo = { 0.1f, 0, 10, 0,      32,32 };

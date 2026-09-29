@@ -18,6 +18,18 @@
     std::bind(&__selector__, __target__, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, \
               ##__VA_ARGS__)
 
+#ifndef D2_INDEX
+
+#define D2_INDEX  USHORT
+
+struct D2_VERTEX
+{
+	XFloat3  pos;
+	XFloat2  uv;
+	unsigned int   col;
+};
+
+#endif
 
 struct Dx11Vars
 {
@@ -59,11 +71,5 @@ extern Dx11Vars g_Dx11;
 
 
 
-#ifdef _DEBUG
-#pragma comment(lib, "Lib/Nori2D_D.lib")
-
-#else
-#pragma comment(lib, "Lib/Nori2D.lib")
-#endif
 
 

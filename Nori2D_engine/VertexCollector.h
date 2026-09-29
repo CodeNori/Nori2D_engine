@@ -51,6 +51,7 @@ struct LineCollector
     LineCollector();
     void Add(XFloat2* pt, int count, unsigned int color);
     void Add(XFloat2* pt, int vt_count, USHORT* idx, int idx_count, unsigned int color);
+    void AddBox(const col2d::AABBox & aabb, unsigned int color);
     void Draw();
 
 };
