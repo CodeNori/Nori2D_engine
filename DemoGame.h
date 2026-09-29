@@ -14,10 +14,6 @@ public:
 	void Draw(float delta);
 	void DrawGUI(float delta);
 
-	void Init_Tree();
-	void Init_Charactor();
-	void Init_Explosion();
-
 	XSprite sp_tree;
 	XSprite sp_char;
 	XSprite sp_explosion;
